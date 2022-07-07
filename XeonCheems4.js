@@ -8786,7 +8786,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                                     url: `${ytname}`
                                 }
                             }, {
-                                callButton: {
+                                urlButton: {
                                     displayText: '🌐 My Instagram',
                                     url: `${socialm}`
                                 }
