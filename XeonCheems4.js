@@ -1105,7 +1105,7 @@ const latensie = speed() - timestampe
 │💻 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
 │👥 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
 │🎯 𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
-│💡 𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
+│🎯 𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
 └┬────────────┈ ⳹
    │✑  Please Select
    │✑  The Button Below
@@ -8753,7 +8753,7 @@ let buttons = [
 ]
 let buttonMessage = {
 image: thum,
-jpegThumbnail: log0,
+jpegThumbnail: donasi,
 caption: teks,
 footer: `${botname}`,
 buttons: buttons,
@@ -8761,7 +8761,7 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title:"I deserve something for my hardwork",
 body: "Click to donate", 
-thumbnail: fs.readFileSync("XeonMedia/theme/donasi.png"),
+thumbnail: fs.readFileSync("XeonMedia/theme/origami5.png"),
 mediaType:1,
 mediaUrl: 'https://i.ibb.co/4TWHj4Y/donasi.png',
 sourceUrl: "https://i.ibb.co/4TWHj4Y/donasi.png"
@@ -8828,9 +8828,9 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu\nPlease Dont Spam Bot\n`,
-                    buttonText: "Menu",
+                    title: `Hi 👋 ${pushname}`,
+                    description: `*Please Choose The Menu*\n_Please Dont Spam Bot_\n`,
+                    buttonText: "MENU",
                     footerText: `${global.botname}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
