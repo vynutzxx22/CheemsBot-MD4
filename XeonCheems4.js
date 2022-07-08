@@ -8752,8 +8752,8 @@ let buttons = [
 {buttonId: `menu`, buttonText: {displayText: '📝 Menu'}, type: 1}
 ]
 let buttonMessage = {
-image: dlogo,
-jpegThumbnail: dlogo,
+image: thum,
+jpegThumbnail: log0,
 caption: teks,
 footer: `${botname}`,
 buttons: buttons,
@@ -8761,7 +8761,7 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title:"I deserve something for my hardwork",
 body: "Click to donate", 
-thumbnail: fs.readFileSync("XeonMedia/theme/origami5.png"),
+thumbnail: fs.readFileSync("XeonMedia/theme/donasi.png"),
 mediaType:1,
 mediaUrl: 'https://i.ibb.co/4TWHj4Y/donasi.png',
 sourceUrl: "https://i.ibb.co/4TWHj4Y/donasi.png"
