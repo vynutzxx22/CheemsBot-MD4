@@ -8746,14 +8746,14 @@ Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
                     }
                     break
-case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': case 'donasi': {
+case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'sewabot': case 'cekbot': case 'sourcecode': case 'donasi': {
 teks = `*「 ${global.botname} Script 」*\n\nInstagram: ${global.websitex}\nGitHub: ${global.botscript}\n\n———「 *DONASI* 」———\n\nHai kak 😊 ${m.pushName}\nKalian bisa mendukung saya agar bot ini tetap aktif dan kalian bisa menggunakannya\nYang mau donasi bisa ke :  *0859193578139 (via DANA)*\nBerapapun donasi kalian akan sangat berarti 👍\n\nTerimakasih\n\n—「 *SEWA | RUN BOT* 」—\n\n*_SEWA BOT_* \nSewa bot untuk dimasukkan bot ke grup kamu sendiri dan bisa menggunakannya\n▷ Sewa Bot 5k (1 minggu)\n▷ Sewa Bot 15k (1 bulan)\n▷ Sewa Bot 25k (Permanen)\n\n*_JADI BOT_* \nJika ingin punya bot sendiri seperti punya saya\n▷ Jadi Bot 10k Tidak Owner (1 minggu)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 25k (1 bulan)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 50k (Permanen)\nNB : ⚠️ Batas Scan Kode QR 5 Kali\n\n*_JASA RUN BOT_*\nJika bingung cara menjalankan bot mu bisa pakai jasa run saya\n▷ Run Bot 3k (1 minggu)\n▷ Run Bot 5k (1 bulan)\n▷ Run Bot 10k (Permanen)\nNB : ⚠️ Batas Scan Kode QR 5 Kali\n\n📖 *_RULES_*\n▷ ⚠️ *Dana yg sudah masuk tidak bisa dikembalikan*\n⚠️ *Jika akunmu terkena banned bukan urusan saya*\n\n🏦 *_PAYMENT :_*\n▷ DANA : 0859193578139 (Scan Kode QR Diatas)\n▷ Pulsa : 0859193578139\n\n*Minat? Langsung chat aja ya cuy 🐦*\n*Contact person Owner* :\nwa.me/62859193578139`
 let buttons = [
 {buttonId: `menu`, buttonText: {displayText: '📝 Menu'}, type: 1}
 ]
 let buttonMessage = {
-image: thum,
-jpegThumbnail: donasi,
+image: dlogo,
+jpegThumbnail: dlogo,
 caption: teks,
 footer: `${botname}`,
 buttons: buttons,
