@@ -77,6 +77,7 @@ global.thum = fs.readFileSync("./XeonMedia/theme/origami3.jpeg") //ur thumb pic
 global.log0 = fs.readFileSync("./XeonMedia/theme/origami3.jpeg") //ur logo pic
 global.err4r = fs.readFileSync("./XeonMedia/theme/origami3.jpeg") //ur error pic
 global.thumb = fs.readFileSync("./XeonMedia/theme/origami3.jpeg") //ur thumb pic
+global.donasi = fs.readFileSync("./XeonMedia/theme/donasi.png") //ur thumb pic
 
 //damtabase
 global.premium = ['62859193578139'] //ur premium numbers
