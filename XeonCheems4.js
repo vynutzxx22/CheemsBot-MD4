@@ -10681,7 +10681,7 @@ await XeonBotInc.send5ButImg(from, `*『 📋 MAIN MENU 』*
 
 ━━『  *${ownername}*  』━━` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "🌐 My Web","url": `${ytname}`}},{"urlButton": {"displayText": "📣 My Instagram","url": `${socialm}`}},{"quickReplyButton": {"displayText": "💰Sewa Bot","id": 'donasi'}},{"quickReplyButton": {"displayText": "👤 Owner","id": 'owner'}},{"quickReplyButton": {"displayText": "🔙 Back To List Menu","id": 'command'}}] )
 break
-case 'tqtt': 
+case 'tqtt': case 'tqto':
      var unicorn = await getBuffer(picak+'Thanks To')
 await XeonBotInc.send5ButImg(from, `Thanks to
 Allah SWT.
