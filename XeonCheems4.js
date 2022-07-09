@@ -8023,8 +8023,8 @@ let search = await yts(text)
 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
 let ytvc = await hx.youtube(anu.url)
 let buttons = [
-{buttonId: `.ytmp4 ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `.ytmp3 ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `.ytmp4 ${ytvc.link}`, buttonText: {displayText: '🎥 Video'}, type: 1},
+{buttonId: `.ytmp3 ${ytvc.mp3}`, buttonText: {displayText: '🎵 Audio'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
@@ -8066,8 +8066,8 @@ ${global.themeemoji} Quality : ${res.quality}
 
 _Select video or audio and wait a while_`
 let buttons = [
-{buttonId: `.ytmp4 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `.ytmp3 ${res.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `.ytmp4 ${res.link}`, buttonText: {displayText: '🎥 Video'}, type: 1},
+{buttonId: `.ytmp3 ${res.mp3}`, buttonText: {displayText: '🎵 Audio'}, type: 1}
 ]
 let buttonMessage = {
 image: {url:res.thumb},
@@ -8097,7 +8097,7 @@ if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"Success", contextInfo:{externalAdReply:{
 title:`${global.botname}`,
 body:`${global.ownername}`,
-thumbnail: thum,
+thumbnail: log0,
 mediaType:2,
 mediaUrl: `${global.websitex}`,
 sourceUrl: `${global.websitex}`
@@ -8110,7 +8110,7 @@ if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, {audio:{url:args[0]}, mimetype:"audio/mpeg", ptt:false, contextInfo:{externalAdReply:{
 title:`${global.botname}`,
 body:`${global.ownername}`,
-thumbnail: thum,
+thumbnail: log0,
 mediaType:2,
 mediaUrl: `${global.websitex}`,
 sourceUrl: `${global.websitex}`
@@ -8161,7 +8161,7 @@ let buttons = [
 ]
 let buttonMessage = {
 image: { url: imgnyee },
-caption:  `${global.dogeemoji} Title : ` + args.join(" ") + `\n${global.dogeemoji} Media Url : `+imgnyee,
+caption:  `${global.themeemoji} Title : ` + args.join(" ") + `\n${global.themeemoji} Media Url : `+imgnyee,
 footer: `${global.botname}`,
 buttons: buttons,
 headerType: 4,
