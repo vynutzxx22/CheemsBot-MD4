@@ -74,7 +74,7 @@ global.author = "ｖｙｎｕｔｚｘｘ２２" //ur sticker watermark author
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/origami5.png") //ur thumb pic
-global.log0 = fs.readFileSync("./XeonMedia/theme/origami3.jpeg") //ur logo pic
+global.log0 = fs.readFileSync("./XeonMedia/theme/origami2.jpeg") //ur logo pic
 global.err4r = fs.readFileSync("./XeonMedia/theme/origami3.jpeg") //ur error pic
 global.thumb = fs.readFileSync("./XeonMedia/theme/origami3.jpeg") //ur thumb pic
 
