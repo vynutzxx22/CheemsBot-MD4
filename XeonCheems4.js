@@ -1106,6 +1106,11 @@ const latensie = speed() - timestampe
 │👥 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
 │🎯 𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
 │🎯 𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
+│
+└─「 𝙏𝙄𝙈𝙀 」       
+│🌃 𝗪𝗜𝗕 : ${wib}
+│🌇 𝗪𝗜𝗧𝗔 : ${wita}
+│🏙️ 𝗪𝗜𝗧 : ${wit}
 └┬────────────┈ ⳹
    │✑  Please Select
    │✑  The Button Below
@@ -8837,7 +8842,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                   {
                     "title": "📋 MENU UTAMA",
                     "description": "Menampilkan Menu Utama Bot",
-                    "rowId": `${prefix}mainmenu`
+                    "rowId": `${prefix}othermenu`
                   },
                   {
                     "title": "🧙PEMILIK BOT",
@@ -9779,6 +9784,8 @@ await XeonBotInc.send5ButImg(from, `*『 🧙 OWNER MENU 』*
 ▷ ${prefix}banchat [on/off]
 ▷ ${prefix}join [link]
 ▷ ${prefix}leavegc
+▷ ${prefix}listpc
+▷ ${prefix}listgc
 ▷ ${prefix}setbio
 ▷ ${prefix}block [user]
 ▷ ${prefix}unblock [user]
@@ -10673,8 +10680,6 @@ await XeonBotInc.send5ButImg(from, `*『 📋 MAIN MENU 』*
 ▷ ${prefix}delete
 ▷ ${prefix}chatinfo
 ▷ ${prefix}quoted
-▷ ${prefix}listpc
-▷ ${prefix}listgc
 ▷ ${prefix}donate
 ▷ ${prefix}request
 ▷ ${prefix}report [bug]
