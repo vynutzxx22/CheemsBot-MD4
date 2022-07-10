@@ -6159,7 +6159,7 @@ gis(args.join(" "), async (error, result) => {
 n = result
 images = n[Math.floor(Math.random() * n.length)].url
 let buttons = [
-{buttonId: `gimage ${args.join(" ")}`, buttonText: {displayText: '➡️ Next Image '}, type: 1}
+{buttonId: `.gimage ${args.join(" ")}`, buttonText: {displayText: '➡️ Next Image '}, type: 1}
 ]
 let buttonMessage = {
 image: { url: images },
@@ -6171,12 +6171,12 @@ footer: `${global.botname}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
-title:`${global.ownername}`,
-body:`${global.watermark}`,
+title:`${global.botname}`,
+body:`${global.ownername}`,
 thumbnail: log0,
 mediaType:2,
 mediaUrl: `${global.websitex}`,
-sourceUrl: `{global.websitex}`
+sourceUrl: `${global.websitex}`
 }}
 }
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -6558,7 +6558,7 @@ sourceUrl: args[0]
 XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 }
 break
-            case 'pinterest2': {
+            case 'pinterest2': case 'pin2': {
                  if (isBan) return reply(mess.ban)        
 if (isBanChat) return reply(mess.banChat)
                 reply(mess.wait)
@@ -8157,7 +8157,7 @@ try {
 hx.pinterest(args.join(" ")).then(async(res) => {
 imgnyee = res[Math.floor(Math.random() * res.length)]
 let buttons = [
-{buttonId: `pinterest ${args.join(" ")}`, buttonText: {displayText: 'Next Image 👀'}, type: 1}
+{buttonId: `.pinterest ${args.join(" ")}`, buttonText: {displayText: 'Next Image 👀'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: imgnyee },
@@ -8842,7 +8842,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                   {
                     "title": "📋 MENU UTAMA",
                     "description": "Menampilkan Menu Utama Bot",
-                    "rowId": `${prefix}othermenu`
+                    "rowId": `${prefix}mainmenu`
                   },
                   {
                     "title": "🧙PEMILIK BOT",
@@ -8882,7 +8882,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     {
                     "title": "│✒️│MAKER MENU",
                     "description": "Menu Untuk Membuat Sesuatu Dengan Bot",
-                    "rowId": `${prefix}indomenu`
+                    "rowId": `${prefix}makermenu`
                   },
                   {
                     "title": "│🎵│SOUND MENU",
@@ -8896,7 +8896,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                   },
                   {
                     "title": "│🎇│STICKER MENU",
-                    "description": "Stiker Random",
+                    "description": "Untuk Membuat Stiker",
                     "rowId": `${prefix}stickermenu`
                   },
                   {
@@ -8952,7 +8952,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     {
                     "title": "│🎮│GAME MENU",
                     "description": "Menu Untuk Main Game",
-                    "rowId": `${prefix}indomenu`
+                    "rowId": `${prefix}gamemenu`
                   },
                     {
                       "title": "│⚒️│CONVERTER MENU",
@@ -9363,6 +9363,9 @@ await XeonBotInc.send5ButImg(from, `
 ▷ ${prefix}couplepp
 
 *『 😀 STICKER MENU 』*
+▷ ${prefix}sticker
+▷ ${prefix}smeme [reply img]
+▷ ${prefix}wm [reply img|gif|stik]
 ▷ ${prefix}patrick
 ▷ ${prefix}emoji
 ▷ ${prefix}emojimix
@@ -10212,6 +10215,9 @@ case 'stickermenu':
   if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Sticker Menu')
 await XeonBotInc.send5ButImg(from, `*『 😀 STICKER MENU 』*
+▷ ${prefix}sticker
+▷ ${prefix}smeme [reply img]
+▷ ${prefix}wm [reply img|gif|stik]
 ▷ ${prefix}patrick
 ▷ ${prefix}emoji
 ▷ ${prefix}emojimix
@@ -10657,7 +10663,7 @@ await XeonBotInc.send5ButImg(from, `*『 🕊️ HOROSCOPE MENU 』*
 
 ━━『  *${ownername}*  』━━` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "🌐 My Web","url": `${ytname}`}},{"urlButton": {"displayText": "📣 My Instagram","url": `${socialm}`}},{"quickReplyButton": {"displayText": "💰Sewa Bot","id": 'donasi'}},{"quickReplyButton": {"displayText": "👤 Owner","id": 'owner'}},{"quickReplyButton": {"displayText": "🔙 Back To List Menu","id": 'command'}}] )
 break
-case 'othermenu':
+case 'mainmenu':
      if (isBan) return reply(mess.ban)
   if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Main Menu')
