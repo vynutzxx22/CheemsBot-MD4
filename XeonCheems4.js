@@ -3552,17 +3552,19 @@ break
 case 'smeme': case 'stickermeme': case 'stickmeme': {
      if (isBan) return reply(mess.ban)        
 if (isBanChat) return reply(mess.banChat)
-let { TelegraPh } = require('./lib/uploader')
-if (!text) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
-if (text.includes('|')) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
-if (!/image/.test(mime)) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
-mee = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
-mem = await TelegraPh(mee)
-meme = `https://api.memegen.link/images/custom/-/${text}.png?background=${mem}`
-memek = await XeonBotInc.sendImageAsSticker(m.chat, meme, m, { packname: global.packname, author: global.author })
-await fs.unlinkSync(memek)
-}
-break
+let respond = `Kirim/reply image/sticker dengan caption ${prefix + command} text1|text2`
+          if (!/image/.test(mime)) throw respond
+            if (!text) throw respond
+            atas = text.split('|')[1] ? text.split('|')[1] : '-'
+            bawah = text.split('|')[0] ? text.split('|')[0] : '-'        
+          let { TelegraPh } = require('./lib/uploader')
+          mee = await GojoMdNx.downloadAndSaveMediaMessage(quoted)
+            mem = await TelegraPh(mee)
+          meme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas)}/${encodeURIComponent(bawah)}.png?background=${mem}`
+          memek = await GojoMdNx.sendImageAsSticker(m.chat, meme, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(memek)
+            }
+         break
             case 'ebinary': {
                  if (isBan) return reply(mess.ban)        
 if (isBanChat) return reply(mess.banChat)
