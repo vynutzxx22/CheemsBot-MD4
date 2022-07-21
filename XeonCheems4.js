@@ -3558,10 +3558,10 @@ let respond = `Kirim/reply image/sticker dengan caption ${prefix + command} text
             atas = text.split('|')[1] ? text.split('|')[1] : '-'
             bawah = text.split('|')[0] ? text.split('|')[0] : '-'        
           let { TelegraPh } = require('./lib/uploader')
-          mee = await GojoMdNx.downloadAndSaveMediaMessage(quoted)
+          mee = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
             mem = await TelegraPh(mee)
           meme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas)}/${encodeURIComponent(bawah)}.png?background=${mem}`
-          memek = await GojoMdNx.sendImageAsSticker(m.chat, meme, m, { packname: global.packname, author: global.author })
+          memek = await XeonBotInc.sendImageAsSticker(m.chat, meme, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(memek)
             }
          break
