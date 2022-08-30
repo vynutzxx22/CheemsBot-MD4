@@ -64,7 +64,7 @@ global.location = "Deli Serdang, Sumatra Utara, Indonesia" //ur location
 global.owner = ['62859193578139']
 global.ownertag = '62859193578139' //ur tag number
 global.botname = '𝐀𝐋𝐕𝐘𝐍-𝐁𝐎𝐓𝐙' //ur bot name
-global.linkz = "https://instagram.com/vynutzxx22" //your theme url which will be displayed on whatsapp
+global.linkz = "https://chat.whatsapp.com/JSf6GXURju36sAo7Us0PLB" //your theme url which will be displayed on whatsapp
 global.websitex = "https://instagram.com/vynutzxx22" //ur website to be displayed
 global.botscript = 'https://github.com/alvyn-vengeance' //script link
 global.reactmoji = "😭" //ur menu react emoji
@@ -109,7 +109,7 @@ global.mess = {
     admin: '🙅 _*Fitur Khusus Admin Group!*_',
     botAdmin: '🙏 _*Bot Harus Menjadi Admin Terlebih Dahulu!*_',
     owner: '🙅 _*Fitur Khusus Owner Bot*_',
-    group: '👥 _*Fitur hanya bisa digunakan didalam Grup, Silahkan Join Grup Bot : https://chat.whatsapp.com/C3mbk4fnGHW3LbEEtFgj8T*_',
+    group: '👥 _*Fitur hanya bisa digunakan didalam Grup, Silahkan Join Grup Bot : https://chat.whatsapp.com/JSf6GXURju36sAo7Us0PLB*_',
     private: '👤 _*Fitur Digunakan Hanya Untuk Private Chat!*_',
     bot: '❎ _*Fitur Khusus Pengguna Nomor Bot*_',
     wait: '⏳ _*Loading... Sabar Wibu*_',
@@ -121,7 +121,7 @@ global.mess = {
 }
     global.limitawal = {
     premium: "Infinity",
-    free: 10,
+    free: 50,
     monayawal: 1000
 }
    global.rpg = {
