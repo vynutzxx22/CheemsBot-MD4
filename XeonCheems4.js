@@ -7967,8 +7967,8 @@ break
 texttk = `Wanna download no watermark or audio?
 _Please choose the button below_`
 let buttons = [
-{buttonId: `.ttnowm ${q}`, buttonText: {displayText: 'Tanpa Watermark ❌'}, type: 1},
-{buttonId: `.ttaud ${q}`, buttonText: {displayText: 'Audio 🎶'}, type: 1}
+{buttonId: `.tiktoknowm ${q}`, buttonText: {displayText: 'Tanpa Watermark ❌'}, type: 1},
+{buttonId: `.tiktokmp3 ${q}`, buttonText: {displayText: 'Audio 🎶'}, type: 1}
 ]
 let buttonMessage = {
 video: {url:xeontiktokop},
@@ -7988,7 +7988,7 @@ sourceUrl: q
 XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 }
 break
-  case 'tiktoknowm': case 'ttnowm':{
+  /*case 'tiktoknowm': case 'ttnowm':{
     if (isBan) return reply(mess.ban)
   if (isBanChat) return reply(mess.banChat)
   if (!q) return reply('Where is the link?')
@@ -8001,8 +8001,10 @@ break
    const xeonytiktoknowm = musim_rambutan.result.nowatermark
     XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "✅ *Selesai*\n*Jgn lupa donasi agar botnya tetap aktif*\n💰 *Donasi bisa ke : 0859193578139 (via DANA)*" }, { quoted: m })
    }
-  break
+  break*/
   case 'tiktokaudio':
+case 'tiktokmp3':
+case 'ttmp3':
 case 'tiktokmusic':
 case 'ttaud':{
   if (isBan) return reply(mess.ban)
@@ -8093,32 +8095,30 @@ reply("Link error!")
 }
 }
 break
-case 'ytmp4': {
-   if (isBan) return reply(mess.ban)        
-if (isBanChat) return reply(mess.banChat)
-XeonBotInc.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"✅ *Selesai*", contextInfo:{externalAdReply:{
-title:`${global.botname}`,
-body:`${global.ownername}`,
-thumbnail: log0,
-mediaType:2,
-mediaUrl: `${global.websitex}`,
-sourceUrl: `${global.websitex}`
-}}}, {quoted:m})
-}
-break
-case 'ytmp3': {
-   if (isBan) return reply(mess.ban)        
-if (isBanChat) return reply(mess.banChat)
-XeonBotInc.sendMessage(from, {audio:{url:args[0]}, mimetype:"audio/mpeg", ptt:false, contextInfo:{externalAdReply:{
-title:`${global.botname}`,
-body:`${global.ownername}`,
-thumbnail: log0,
-mediaType:2,
-mediaUrl: `${global.websitex}`,
-sourceUrl: `${global.websitex}`
-}}}, {quoted:m})
-}
-break
+case 'ytmp4': case 'getvideo': case 'ytvideo': {
+                let { ytv } = require('./lib/y2mate')
+                if (!text) return reply(`Example : ${prefix + command} https://youtu.be/G9kz-tag04U 480p`)
+                reply(mess.wait)
+                let quality = args[1] ? args[1] : '360p'
+                let media = await ytv(text, quality)
+                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
+                buf = await getBuffer(media.thumb)
+                XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🎀 Title : ${media.title}\n📁 File Size : ${media.filesizeF}\n🔗 Url : ${isUrl(text)}\n🎦 Ext : MP4\n👍 Resolution : ${args[1] || '360p'}` }, { quoted: m }),
+                XeonBotInc.sendMessage(m.chat, { document: { url: media.dl_link }, jpegThumbnail:buf, mimetype: 'video/mp4', fileName: `${media.title}.mp4` }, { quoted: m })
+            }
+            break
+case 'ytmp3': case 'getmusic': case 'ytaudio': {
+                let { yta } = require('./lib/y2mate')
+                if (!text) return reply(`Example : ${prefix + command} https://youtu.be/tx9ePOLuIxc 128kbps`)
+                let quality = args[1] ? args[1] : '128kbps'
+                let media = await yta(text, quality)
+                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
+                buf = await getBuffer(media.thumb)
+                XeonBotInc.sendImage(m.chat, media.thumb, `🎀 Title : ${media.title}\n📁 File Size : ${media.filesizeF}\n🔗 Url : ${isUrl(text)}\n🎦 Ext : MP3\n👍 Resolution : ${args[1] || '128kbps'}`, m)
+                XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m }),
+                XeonBotInc.sendMessage(m.chat, { document: { url: media.dl_link }, jpegThumbnail:buf, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+            }
+            break
             case 'ytdl': {
               if (isBan) return reply(mess.ban)
   if (isBanChat) return reply(mess.banChat)
@@ -8791,7 +8791,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '💰Sewa Bot',
+                                    displayText: '💰 Sewa Bot',
                                     id: 'donasi'
                                 }
                             }, {
@@ -8820,7 +8820,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                         let buttonmenu = [
           { urlButton: { displayText: `🌐 My Web`, url : `${ytname}` } },
             { urlButton: { displayText: `📣 My Instagram`, url: `${socialm}` } },
-            { quickReplyButton: { displayText: `💰Sewa Bot`, id: 'donasi'} },
+            { quickReplyButton: { displayText: `💰 Sewa Bot`, id: 'donasi'} },
             { quickReplyButton: { displayText: `👤 Owner`, id: 'owner'} },
             { quickReplyButton: { displayText: `📋 List Menu`, id: 'command'} }
           ]
@@ -8852,7 +8852,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     "rowId": `${prefix}owner`
                     },
                   {
-                    "title": "💰SEWA BOT & DONASI",
+                    "title": "💰 SEWA BOT & DONASI",
                     "description": "Sewa Bot Untuk Dimasukkan Kegrup Kamu Dan Bisa Menggunakannya",
                     "rowId": `${prefix}donasi`
                     },
