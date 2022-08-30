@@ -7953,7 +7953,7 @@ break
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
             }
             break
-      case 'tiktok':{
+      /*case 'tiktok':{
     if (isBan) return reply(mess.ban)
   if (isBanChat) return reply(mess.banChat)
   if (!q) return reply('Where is the link?')
@@ -7988,7 +7988,7 @@ sourceUrl: q
 XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 }
 break
-  /*case 'tiktoknowm': case 'ttnowm':{
+  case 'tiktoknowm': case 'ttnowm':{
     if (isBan) return reply(mess.ban)
   if (isBanChat) return reply(mess.banChat)
   if (!q) return reply('Where is the link?')
@@ -8001,7 +8001,7 @@ break
    const xeonytiktoknowm = musim_rambutan.result.nowatermark
     XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "✅ *Selesai*\n*Jgn lupa donasi agar botnya tetap aktif*\n💰 *Donasi bisa ke : 0859193578139 (via DANA)*" }, { quoted: m })
    }
-  break*/
+  break
   case 'tiktokaudio':
 case 'tiktokmp3':
 case 'ttmp3':
@@ -8018,7 +8018,7 @@ case 'ttaud':{
    const xeonytiktokaudio = musim_rambutan.result.nowatermark
     XeonBotInc.sendMessage(from, { audio: { url: xeonytiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
    }
- break
+ break*/
   case 'music': case 'play': case 'song': case 'ytplay': {
    if (isBan) return reply(mess.ban)        
 if (isBanChat) return reply(mess.banChat)
