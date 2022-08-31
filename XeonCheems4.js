@@ -3676,33 +3676,13 @@ spankd = await axios.get(`https://nekos.life/api/v2/img/spank`)
                     return reply('Error!')
                                     })
 break
-case 'bj' : case 'blowjob':
+case 'blowjobgif': case 'bj' : case 'blowjob':
    if (isBan) return reply(mess.ban)        
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-    waifudd = await axios.get(`https://waifu.pics/nsfw/blowjob`)         
- let nbjbot = [
-    {buttonId: `.bj`, buttonText: {displayText: `Next ⚡`}, type: 1},
-    ]
-  let button4Messages = {
-   image: {url:waifudd.data.url},
-   caption:  `Ngocok Lagi`,
-  buttons: nbjbot,
-  headerType: 1
-  }      
-            await XeonBotInc.sendMessage(m.chat, button4Messages, { quoted:m }).catch(err => {
-                    return('Error!')
-                })
-break
-case 'blowjobgif': case 'bjgif':
-   if (isBan) return reply(mess.ban)        
-if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
-if (!AntiNsfw) return reply(mess.nsfw)
-reply(mess.wait)
-bjd = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)         
+bjd = await axios.get(`https://waifu.pics/nsfw/blowjob`)         
   let bjf = await getBuffer(bjd.data.url)
         await XeonBotInc.sendMessage(m.chat,{video: bjf, gifPlayback:true},{ quoted:m }).catch(err => {
                     return reply('error..')
@@ -3731,7 +3711,7 @@ reply(mess.wait)
     ]
   let button2Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Ngocok Lagi`,
+   caption:  `Here you go!`,
   buttons: trapbot,
   headerType: 1
   }     
@@ -3745,14 +3725,13 @@ case 'hneko' :
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-reply(mess.wait)
     waifudd = await axios.get(`https://waifu.pics/nsfw/neko`)
  let hnekobot = [
     {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
     ]
   let button3Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Ngocok Lagi`,
+   caption:  `Here you go!`,
   buttons: hnekobot,
   headerType: 1
   }      
@@ -3773,7 +3752,7 @@ reply(mess.wait)
     ]
   let button4Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Ngocok Lagi`,
+   caption:  `Here you go!`,
   buttons: nwaifubot,
   headerType: 1
   }      
