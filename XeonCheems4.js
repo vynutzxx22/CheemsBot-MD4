@@ -8041,7 +8041,6 @@ case 'ttaud':{
 case 'music': case 'play': case 'song': case 'ytplay': case 'getmusic': case 'getvideo': case 'yt': case 'youtube': case 'ytvideo': case 'ytmusic': {
    if (isBan) return reply(mess.ban)        
 if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
 if (!text) return reply(`Example : ${prefix + command} megadeth holy wars... the punishment due`)               
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -8108,7 +8107,6 @@ reply("Link error!")
 }
 break*/
 case 'ytmp4': case 'getvideo': case 'ytvideo': {
-                if (!m.isGroup) return replay(mess.group)
                 let { ytv } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtu.be/G9kz-tag04U 480p`)
                 reply(mess.wait)
@@ -8121,7 +8119,6 @@ case 'ytmp4': case 'getvideo': case 'ytvideo': {
             }
             break
 case 'ytmp3': case 'getmusic': case 'ytaudio': {
-                if (!m.isGroup) return replay(mess.group)
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtu.be/tx9ePOLuIxc 128kbps`)
                 let quality = args[1] ? args[1] : '128kbps'
@@ -8150,7 +8147,6 @@ case 'ytmp3': case 'getmusic': case 'ytaudio': {
 case 'ytshorts': case 'shorts': {
    if (isBan) return reply(mess.ban)        
 if (isBanChat) return reply(mess.banChat)
-  if (!m.isGroup) return replay(mess.group)
   if (!text) return reply(`*Use ${prefix + command} put yt shorts link*`)
   if (!isUrl(args[0]) && !args[0].includes('youtube')) return reply(`The link you provided is not valid`)
   xeonkey.Youtube(`${text}`).then(async (data) => {
