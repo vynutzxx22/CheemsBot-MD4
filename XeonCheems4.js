@@ -253,11 +253,11 @@ const AntiLinkTelegram = m.isGroup ? ntilinktg.includes(from) : false
 const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
 const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
 const antiWame = m.isGroup ? ntwame.includes(from) : false
-const antiToxic = m.isGroup ? nttoxic.includes(from) : false
-const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
+const antiToxic = m.isGroup ? nttoxic.includes(from) : true
+const antiVirtex = m.isGroup ? ntvirtex.includes(from) : true
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
 const isAutoStick = _autostick.includes(from)
-const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
+const isAutoSticker = m.isGroup ? autosticker.includes(from) : true
 const Autoreply = m.isGroup ? autorep.includes(from) : true
         const isBan = banUser.includes(m.sender)
         const isBanChat = m.isGroup ? banchat.includes(from) : false
@@ -295,17 +295,17 @@ autoreadsw = true
       if (setting) {
     if (!isNumber(setting.status)) setting.status = 0
     if (!('autobio' in setting)) setting.autobio = false
-if (!('templateImage' in setting)) setting.templateImage = false
+if (!('templateImage' in setting)) setting.templateImage = true
 if (!('templateVideo' in setting)) setting.templateVideo = false
-    if (!('templateGif' in setting)) setting.templateGif = true
+    if (!('templateGif' in setting)) setting.templateGif = false
     if (!('templateMsg' in setting)) setting.templateMsg = false
     if (!('templateDocument' in setting)) setting.templateDocument = false
       } else global.db.data.settings[botNumber] = {
     status: 0,
     autobio: false,
-    templateImage: false,
+    templateImage: true,
     templateVideo: false,
-    templateGif: true,
+    templateGif: false,
     templateMsg: false,
     templateDocument: false,
       }
